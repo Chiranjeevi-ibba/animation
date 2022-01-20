@@ -145,8 +145,8 @@ body {
     text-align: center;
 }
 .each-lorem-psum-cont {
-    width:230px;
-    height: 220px;
+    width:100%;
+    height: 100%;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     display: flex;
     flex-direction: column;
@@ -156,13 +156,52 @@ body {
     padding-left: 30px;
     margin: 20px;
     margin-bottom:40px ;
-    transition: all 1s ease;
+    transition: all 2s ease;
+}
+
+
+
+
+.flip-card{
+    width: 230px;
+    height: 220px;
+  }
+  .inner-flip-card{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
     transform-style: preserve-3d;
-    backface-visibility: hidden;
-}
-.each-lorem-psum-cont:hover {
+    transition: all 2s ease;
+  }
+  .inner-flip-card:hover {
     transform: rotateY(180deg);
-}
+  }
+  .front-card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    backface-visibility: hidden;
+    overflow: hidden;
+  }
+  .back-card{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 10px;
+      backface-visibility: hidden;
+      overflow: hidden;
+      transform: rotateY(180deg);
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+
+
+
+
 .lorem-dots-image {
     width:50px;
     height:25px;
@@ -171,6 +210,9 @@ body {
 .main-lorem-psum-cont {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    min-height:600px
 }
 .sub-lorem-text {
     font-family: Poppins-Bold;
@@ -216,6 +258,7 @@ body {
     background-image: linear-gradient(to left, #39B2B7, #42D4EA, #45E2FF);
     color: #311A8B;
 }
+
 
 
 /* -------------------section-3-------------------- */
@@ -320,6 +363,7 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: bold;
+    transition: all 1s ease;
 }
 .footer-action-btn-cont {
     display: flex;
@@ -328,7 +372,6 @@ body {
     align-items: flex-start;
     flex-wrap: wrap;
     width:260px;
-    transition: all 2s ease;
 }
 .footer-action-btn:hover {
     color: #FA3B6E;
@@ -410,11 +453,11 @@ body {
 .icons-cont {
     display: flex;
     flex-direction: row;
-    
 }
 .icons {
     text-decoration: none;
     transition: all 1s ease-in-out;
+    
 }
 .icons:hover {
     transform: rotateY(360deg);
@@ -497,6 +540,7 @@ body {
         min-width:100px
     }
 
+
     /* ----------------section-2--------------------- */
 
     .inner-lorem-text-cont {
@@ -507,13 +551,20 @@ body {
         font-size: 45px;
         margin: 0px;
     }
+    .flip-card{
+        width: 360px;
+        height: 260px;
+      }
     .each-lorem-psum-cont {
-        width:380px;
-        height: 280px;
+        width:100%;
+        height: 100%;
         padding:30px;
         padding-left: 30px;
         margin: 20px;
         margin-bottom:40px ;
+    }
+    .main-lorem-psum-cont {
+        min-height:800px
     }
     .lorem-dots-image {
         width:80px;
@@ -638,9 +689,6 @@ body {
     }
 
     /* ----------------section-2--------------------- */
-    .inner-lorem-text-cont {
-        max-width:1020px;
-    }
     .lorem-text {
         font-size: 60px;
         margin: 0px;
@@ -648,14 +696,22 @@ body {
     .main-lorem-psum-cont  {
         flex-direction: row;
     }
-    .each-lorem-psum-cont {
-        width:415px;
+    .flip-card{
+        width: 415px;
         height: 380px;
+      }
+    .each-lorem-psum-cont {
+        width:100%;
+        height: 100%;
         padding-left: 40;
         padding-top: 80;
         padding-right: 60;
         padding-bottom: 90;
         margin: 40;
+    }
+    .main-lorem-psum-cont {
+        min-width:100%;
+        min-height: 600px;
     }
     .lorem-dots-image {
         width:80px;
