@@ -78,6 +78,9 @@ body {
 .login-btn:hover {
     background-image: linear-gradient(to left, #b79039, #FF8545);
 }
+.menu-li {
+    width:100px;
+}
 .menu-image {
     transition: all 1s linear;
 }
@@ -156,7 +159,7 @@ body {
     padding-left: 30px;
     margin: 20px;
     margin-bottom:40px ;
-    transition: all 2s ease;
+    transition: all 1s ease;
 }
 
 
@@ -192,13 +195,17 @@ body {
       position: absolute;
       width: 100%;
       height: 100%;
+      padding: 20px;
       border-radius: 10px;
       backface-visibility: hidden;
       overflow: hidden;
       transform: rotateY(180deg);
       box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   }
-
+  .lorem-ipsum-image {
+    width: 100%;
+    height: 100%;
+  }
 
 
 
@@ -314,19 +321,19 @@ body {
     border:1px solid #FFC04A;
     padding-left: 14px;
     padding-right: 14px;
-    transition: all 2s ease;
+    transition: all 0.5s ease;
 }
 .link-btn-two {
     border:1px solid #2AFAC2;
     padding-left: 16px;
     padding-right: 16px;
-    transition: all 2s linear;
+    transition: all 0.5s ease-in-out;
 }
 .link-btn-three {
     border:1px solid #45E2FF;
     padding-left: 20px;
     padding-right: 20px;
-    transition: all 2s ease-in-out;
+    transition: all 0.5s linear;
 }
 .link-btn-one:hover {
     background-color: #FFC04A;
@@ -363,7 +370,7 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: bold;
-    transition: all 1s ease;
+    transition: all 0.5s ease;
 }
 .footer-action-btn-cont {
     display: flex;
@@ -444,7 +451,7 @@ body {
     border-radius: 20px;
     font-family: Poppins-Bold;
     margin: 16px;
-    transition: all 1s linear;
+    transition: all .5s linear;
 }
 .partner-button:hover {
     background-color: #FA3B6E;
@@ -456,12 +463,14 @@ body {
 }
 .icons {
     text-decoration: none;
-    transition: all 1s ease-in-out;
-    
+    display: block;
+    transition: all 2s ease-in-out;
 }
 .icons:hover {
-    transform: rotateY(360deg);
+    position: relative;
+    bottom: 20px;
 }
+
 .facebook-icon::after {
     content: "\e900";
     font-family: "icomoon";
